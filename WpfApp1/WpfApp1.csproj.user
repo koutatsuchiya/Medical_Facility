@@ -1,0 +1,142 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup />
+  <ItemGroup>
+    <ApplicationDefinition Update="App.xaml">
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Update="AddCSYT.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="AddEmployee.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="AddPatient.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="AddRole.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="AddUser.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="AllPrivilegeOfRole.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="AllPrivilegeOfUser.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="CSYTMainWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="CSYTPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Doctor.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="DoctorProfilePage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="GrantPrivilege.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Login.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="LookUpPatientPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="MedicalRecordPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="MedicalRecordResultWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="NVCMainWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="PatientDetail.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="RolePage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="UserPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="AddCSYT.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="AddEmployee.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="AddPatient.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="AddRole.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="AddUser.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="AllPrivilegeOfRole.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="AllPrivilegeOfUser.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="CSYTMainWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="CSYTPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Doctor.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="DoctorProfilePage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="GrantPrivilege.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Login.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="LookUpPatientPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="MainWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="MedicalRecordPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="MedicalRecordResultWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="NCV_HSBA.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="NCV_Profile.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="NVCMainWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="PatientDetail.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="RolePage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="UserPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+</Project>

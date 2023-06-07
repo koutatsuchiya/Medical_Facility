@@ -1,0 +1,102 @@
+﻿<Page x:Class="WpfApp1.LookUpPatientPage"
+      xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      xmlns:local="clr-namespace:WpfApp1"
+      mc:Ignorable="d"
+      d:DesignHeight="665"
+      d:DesignWidth="1400"
+      Title="UserPage">
+    <Canvas>
+        <StackPanel>
+            <DockPanel Width="1400"
+                       Margin="0 20 0 0">
+                <materialDesign:Card Margin="50,0,0,0"
+                                     Height="34"
+                                     Width="1000"
+                                     VerticalAlignment="Top"
+                                     HorizontalAlignment="Left">
+                    <StackPanel Orientation="Horizontal"
+                                Height="28"
+                                Width="1000"
+                                VerticalAlignment="Center">
+                        <TextBox Name="keyword" 
+                                materialDesign:HintAssist.Hint="Mã Bệnh Nhân/CMND"
+                                 materialDesign:TextFieldAssist.DecorationVisibility="Hidden"
+                                 BorderThickness="0"
+                                 MinWidth="950" />
+                    </StackPanel>
+                </materialDesign:Card>
+                <Button Background="#44eb07"
+                        Margin="20, 0, 0, 0"
+                        BorderBrush="{x:Null}"
+                        Name="SearchButton"
+                        Click="SearchButton_Click"
+                        Width="150">
+                    <StackPanel Orientation="Horizontal">
+                        <materialDesign:PackIcon Kind="Search"
+                                                 Foreground="White" />
+                        <TextBlock FontFamily="Champagne &amp; Limousines">
+                        Tìm kiếm
+                        </TextBlock>
+                    </StackPanel>
+                </Button>
+
+            </DockPanel>
+            <materialDesign:Card Width="1300"
+                                 Margin="0, 50, 25, 0">
+                <ListView Name="ListViewPatient"
+                          ScrollViewer.VerticalScrollBarVisibility="Visible"
+                          ScrollViewer.CanContentScroll="False"
+                          MaxHeight="550">
+
+                    <ListView.View>
+                        <GridView>
+                            <GridViewColumn DisplayMemberBinding="{Binding Id}"
+                                            Header="Mã BN"
+                                            Width="120" />
+                            <GridViewColumn DisplayMemberBinding="{Binding Name}"
+                                            Header="Tên BN"
+                                            Width="200" />
+                            <GridViewColumn DisplayMemberBinding="{Binding IdNumber}"
+                                            Header="CMND"
+                                            Width="200" />
+                            <GridViewColumn DisplayMemberBinding="{Binding DOB}"
+                                            Header="Ngày sinh"
+                                            Width="200" />
+                            <GridViewColumn DisplayMemberBinding="{Binding CSYTId}"
+                                            Header="Mã CSYT"
+                                            Width="200" />
+                            <GridViewColumn DisplayMemberBinding="{Binding History}"
+                                            Header="Tiền sử bệnh"
+                                            Width="300" />
+                            <GridViewColumn Width="50">
+                                <GridViewColumn.CellTemplate>
+                                    <DataTemplate>
+                                        <Button Width="40"
+                                                Background="Green"
+                                                BorderBrush="{x:Null}"
+                                                Padding="0"
+                                                Tag="{Binding Id}"
+                                                Click="SeeDetail_Click"
+                                                ToolTip="Xem chi tiết bệnh nhân">
+                                            <Button.Content>
+                                                <materialDesign:PackIcon Kind="Eye"
+                                                                         Foreground="White"
+                                                                         VerticalAlignment="Center"
+                                                                         FontSize="16" />
+                                            </Button.Content>
+                                        </Button>
+                                    </DataTemplate>
+                                </GridViewColumn.CellTemplate>
+                            </GridViewColumn>
+
+                        </GridView>
+                    </ListView.View>
+                </ListView>
+            </materialDesign:Card>
+        </StackPanel>
+    </Canvas>
+</Page>

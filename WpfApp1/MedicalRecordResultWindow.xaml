@@ -1,0 +1,32 @@
+﻿<Window x:Class="WpfApp1.MedicalRecordResultWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp1"
+        mc:Ignorable="d"
+        Title="Kết quả hồ sơ bệnh án dịch vụ" Height="300" Width="500">
+    <Grid>
+        <ListView Name="ListViewMedicalRecordResult"
+                  ScrollViewer.VerticalScrollBarVisibility="Visible"
+                  ScrollViewer.CanContentScroll="False"
+                  MaxHeight="550">
+
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn DisplayMemberBinding="{Binding MedicalRecordId}"
+                                    Header="Mã HSBA"
+                                    Width="120" />
+                    <GridViewColumn DisplayMemberBinding="{Binding DateChecked}"
+                                    Header="Ngày"
+                                    Width="120" />
+                    <GridViewColumn DisplayMemberBinding="{Binding Result}"
+                                    Header="Kết quả"
+                                    Width="160" />
+                    
+
+                </GridView>
+            </ListView.View>
+        </ListView>
+    </Grid>
+</Window>

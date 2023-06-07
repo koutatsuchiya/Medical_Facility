@@ -1,0 +1,198 @@
+﻿<Window x:Class="WpfApp1.AddPatient"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp1"
+        mc:Ignorable="d"
+        Title="AddUser"
+        Height="380"
+        Width="850"
+        WindowStyle="None"
+        AllowsTransparency="True"
+        Background="Transparent"
+        WindowStartupLocation="CenterScreen">
+    <Border CornerRadius="30"
+            BorderThickness="10"
+            BorderBrush="#ebd07a">
+        <Canvas Background="#ebd07a">
+
+            <Grid Width="790"
+                  Height="350">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="1*" />
+                    <ColumnDefinition Width="1*" />
+                    <ColumnDefinition Width="1*" />
+                    <ColumnDefinition Width="1*" />
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="1*" />
+                    <RowDefinition Height="1*" />
+                    <RowDefinition Height="1*" />
+                    <RowDefinition Height="3*" />
+                </Grid.RowDefinitions>
+                <StackPanel Orientation="Horizontal"
+                            Margin="20, 0, 0, 0"
+                            VerticalAlignment="Bottom">
+                    <materialDesign:PackIcon Kind="Account"
+                                             Foreground="Gray"
+                                             Margin="0, 4, 10, 0" />
+                    <TextBox x:Name="NameTextBox"
+                             materialDesign:HintAssist.Hint="Họ tên"
+                             Width="150">
+                    </TextBox>
+                </StackPanel>
+                <StackPanel Grid.Row="0"
+                            Grid.Column="1"
+                            Orientation="Horizontal"
+                            Width="110"
+                            VerticalAlignment="Bottom"
+                            HorizontalAlignment="Left"
+                            Margin="20, 0, 0, 0">
+                    <materialDesign:PackIcon Kind="CreditCard"
+                                             Foreground="Gray"
+                                             Margin="0, 4, 10, 0" />
+                    <TextBox x:Name="IdCardTextBox"
+                             materialDesign:HintAssist.Hint="CMND"
+                             Width="80">
+                    </TextBox>
+                </StackPanel>
+                <DatePicker x:Name="birthPicker"
+                            Width="100"
+                            Grid.Row="0"
+                            Grid.Column="2"
+                            HorizontalAlignment="Left"
+                            VerticalAlignment="Bottom"
+                            materialDesign:HintAssist.Hint="Ngày sinh"
+                            Margin="20, 0, 0, 0" />
+                <StackPanel Grid.Row="0"
+                            Grid.Column="3"
+                            Orientation="Horizontal"
+                            VerticalAlignment="Bottom"
+                            HorizontalAlignment="Left"
+                            Margin="20, 0, 0, 0">
+                    <materialDesign:PackIcon Kind="HospitalBuilding"
+                                             Foreground="Gray"
+                                             Margin="0, 4, 10, 0" />
+                    <TextBox x:Name="csytTextBox"
+                             materialDesign:HintAssist.Hint="Cơ sở y tế"
+                             Width="150">
+                    </TextBox>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal"
+                            Margin="20, 0, 0, 0"
+                            Grid.Row="1"
+                            Grid.Column="0"
+                            VerticalAlignment="Bottom">
+                    <materialDesign:PackIcon Kind="Home"
+                                             Foreground="Gray"
+                                             Margin="0, 4, 10, 0" />
+                    <TextBox x:Name="HomeNumberTextBox"
+                             materialDesign:HintAssist.Hint="Số nhà"
+                             Width="150">
+
+                    </TextBox>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal"
+                            Margin="20, 0, 0, 0"
+                            Grid.Row="1"
+                            Grid.Column="2"
+                            VerticalAlignment="Bottom">
+                    <materialDesign:PackIcon Kind="HomeModern"
+                                             Foreground="Gray"
+                                             Margin="0, 4, 10, 0" />
+                    <TextBox x:Name="DistrictTextBox"
+                             materialDesign:HintAssist.Hint="Quận/Huyện"
+                             Width="150">
+                    </TextBox>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal"
+                            Margin="20, 0, 0, 0"
+                            Grid.Row="1"
+                            Grid.Column="3"
+                            VerticalAlignment="Bottom">
+                    <materialDesign:PackIcon Kind="City"
+                                             Foreground="Gray"
+                                             Margin="0, 4, 10, 0" />
+                    <TextBox x:Name="CityTextBox"
+                             materialDesign:HintAssist.Hint="Tỉnh/Thành phố"
+                             Width="150">
+                    </TextBox>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal"
+                            Margin="20, 0, 0, 0"
+                            Grid.Row="1"
+                            Grid.Column="1"
+                            VerticalAlignment="Bottom">
+                    <materialDesign:PackIcon Kind="Highway"
+                                             Foreground="Gray"
+                                             Margin="0, 4, 10, 0" />
+                    <TextBox x:Name="StreetTextBox"
+                             materialDesign:HintAssist.Hint="Tên đường"
+                             Width="150">
+                    </TextBox>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal"
+                            Margin="20, 0, 0, 0"
+                            Grid.Row="2"
+                            Grid.Column="0"
+                            VerticalAlignment="Bottom">
+                    <materialDesign:PackIcon Kind="History"
+                                             Foreground="Gray"
+                                             Margin="0, 4, 10, 0" />
+                    <TextBox x:Name="HisotryTextBox"
+                             materialDesign:HintAssist.Hint="Tiền sử bệnh"
+                             Width="150">
+                    </TextBox>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal"
+                            Margin="20, 0, 0, 0"
+                            Grid.Row="2"
+                            Grid.Column="1"
+                            Grid.ColumnSpan="2"
+                            VerticalAlignment="Bottom">
+                    <materialDesign:PackIcon Kind="History"
+                                             Foreground="Gray"
+                                             Margin="0, 4, 10, 0" />
+                    <TextBox x:Name="FamilyHisotryTextBox"
+                             materialDesign:HintAssist.Hint="Tiền sử bệnh gia đình"
+                             Width="300">
+                    </TextBox>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal"
+                            Margin="20, 0, 0, 0"
+                            Grid.Row="2"
+                            Grid.Column="3"
+                            VerticalAlignment="Bottom">
+                    <materialDesign:PackIcon Kind="CloseOctagonOutline"
+                                             Foreground="Gray"
+                                             Margin="0, 4, 10, 0" />
+                    <TextBox x:Name="AllergyTextBox"
+                             materialDesign:HintAssist.Hint="Dị ứng thuốc"
+                             Width="150">
+                    </TextBox>
+                </StackPanel>
+                <Button Grid.Column="2"
+                        Grid.Row="3"
+                        Name="AddPatientButton"
+                        Content="Thêm Bệnh Nhân"
+                        Background="#28d106"
+                        Click="AddPatientButton_Click"
+                        BorderBrush="{x:Null}"
+                        Margin="10">
+                </Button>
+                <Button Grid.Column="3"
+                        Grid.Row="3"
+                        Name="CancelButton"
+                        Content="Hủy"
+                        Background="Red"
+                        Click="CancelButton_Click"
+                        BorderBrush="{x:Null}"
+                        Margin="10">
+                </Button>
+
+            </Grid>
+        </Canvas>
+    </Border>
+</Window>

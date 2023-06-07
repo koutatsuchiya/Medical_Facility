@@ -1,0 +1,93 @@
+﻿<Window x:Class="WpfApp1.GrantPrivilege"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp1"
+        mc:Ignorable="d"
+        Title="Grant quyền"
+        Height="450"
+        Width="800">
+    <Canvas>
+        <GroupBox Style="{x:Null}"
+                  Height="148"
+                  Canvas.Left="42"
+                  Canvas.Top="32"
+                  Width="400"
+                  Header="Chọn Loại quyền">
+            <StackPanel>
+                <RadioButton x:Name="PriTableToUser"
+                             GroupName="grant_to"
+                             Content="Cấp quyền trên table"
+                             Style="{StaticResource MaterialDesignChoiceChipAccentOutlineRadioButton}"
+                             Width="300"
+                             FontSize="20"
+                             Checked="PriTableToUser_Checked"
+                             IsChecked="True" />
+                <RadioButton x:Name="puR"
+                             GroupName="grant_to"
+                             Content="Cấp quyền hệ thống"
+                             Style="{StaticResource MaterialDesignChoiceChipAccentOutlineRadioButton}"
+                             Width="300"
+                             FontSize="20"
+                             Checked="puR_Checked" 
+                             />
+                <RadioButton x:Name="ruR"
+                             GroupName="grant_to"
+                             Content="Cấp role"
+                             Style="{StaticResource MaterialDesignChoiceChipAccentOutlineRadioButton}"
+                             Width="300"
+                             FontSize="20"
+                             Checked="ruR_Checked" />
+                
+                
+            </StackPanel>
+        </GroupBox>
+        <StackPanel Height="222"
+                    Width="373"
+                    Canvas.Left="427"
+                    Canvas.Top="32">
+            <ComboBox x:Name="pCombo"
+                      Style="{StaticResource MaterialDesignOutlinedComboBox}"
+                      Canvas.Left="41"
+                      Canvas.Top="211"
+                      Width="310"
+                      IsEditable="True"
+                      Text="--Chọn quyền--"
+                      Margin="10" />
+            <ComboBox x:Name="rCombo"
+                      Canvas.Left="41"
+                      Canvas.Top="138"
+                      Width="310"
+                      Style="{StaticResource MaterialDesignOutlinedComboBox}"
+                      IsEditable="True"
+                      Text="--Chọn role--"
+                      Margin="10"
+                      Visibility="Collapsed"/>
+            <ComboBox x:Name="tCombo"
+                      Canvas.Left="41"
+                      Canvas.Top="286"
+                      Width="310"
+                      Style="{StaticResource MaterialDesignOutlinedComboBox}"
+                      IsEditable="True"
+                      Text="--Chọn table--"
+                      Margin="10" />
+        </StackPanel>
+
+        <CheckBox x:Name="wCheck"
+                  Content="With grant option"
+                  Canvas.Left="472"
+                  Canvas.Top="305" />
+        <Button x:Name="grantBtn"
+                Content="Cấp Quyền"
+                Canvas.Left="635"
+                Canvas.Top="302"
+                Height="36"
+                Width="129"
+                Click="grantBtn_Click"
+                Background="Green"
+                BorderBrush="{x:Null}" />
+
+    </Canvas>
+</Window>

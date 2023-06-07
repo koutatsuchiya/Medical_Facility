@@ -1,0 +1,171 @@
+﻿<Window x:Class="WpfApp1.AllPrivilegeOfUser"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp1"
+        mc:Ignorable="d"
+        Title="Danh sách Quyền của User"
+        Height="680"
+        Width="1250"
+        WindowStartupLocation="CenterScreen"
+        ResizeMode="NoResize">
+    <Canvas Margin="0,-14,0,14">
+        <GroupBox x:Name="userBox"
+                  Style="{x:Null}"
+                  Header="User"
+                  Height="75"
+                  Canvas.Left="40"
+                  Canvas.Top="33"
+                  Width="796"
+                  BorderBrush="#FF161617">
+
+            <Grid HorizontalAlignment="Left"
+                  Height="50"
+                  VerticalAlignment="Top"
+                  Width="756"
+                  Margin="30,0,0,0">
+                <Label x:Name="userIDLabel"
+                       Content="Usename"
+                       Height="31"
+                       Canvas.Left="35"
+                       Canvas.Top="73"
+                       Margin="15,10,677,9" />
+                <TextBox IsReadOnly="True"
+                         x:Name="usernameTextBox"
+                         Height="25"
+                         Canvas.Left="380"
+                         Canvas.Top="28"
+                         TextWrapping="Wrap"
+                         BorderBrush="#FF0B0F1B"
+                         Margin="84,12,572,12" />
+                <Label x:Name="userStatusLabel"
+                       Content="Trạng thái"
+                       Height="31"
+                       Margin="302,12,387,6"
+                       RenderTransformOrigin="1.8,0.454" />
+                <TextBox IsReadOnly="True"
+                         x:Name="statustextBox"
+                         Height="25"
+                         TextWrapping="Wrap"
+                         BorderBrush="#FF0B0F1B"
+                         Margin="374,13,289,12" />
+            </Grid>
+        </GroupBox>
+        <Button x:Name="RevokeButton"
+                Content="Thu hồi"
+                Height="50"
+                Canvas.Left="856"
+                Canvas.Top="58"
+                Width="148"
+                FontSize="15"
+                Background="Red"
+                Click="RevokeButton_Click" 
+                IsEnabled="False"/>
+        <Button x:Name="GrantButton"
+                Content="Cấp quyền"
+                Height="50"
+                Canvas.Left="1042"
+                Canvas.Top="58"
+                Width="148"
+                FontSize="15"
+                Background="Green"
+                Click="GrantButton_Click" />
+        <GroupBox x:Name="groupBox"
+                  Style="{x:Null}"
+                  Header="Permissions"
+                  Height="495"
+                  Canvas.Left="40"
+                  Canvas.Top="133"
+                  Width="640"
+                  BorderBrush="#FF0D0D0E" />
+        <Grid Height="460"
+              Canvas.Left="65"
+              Canvas.Top="153"
+              Width="585">
+            <GroupBox x:Name="viewBox"
+                      Style="{x:Null}"
+                      Header="View"
+                      BorderBrush="#FF0E0E0E"
+                      Margin="8,0,299,240">
+                <ListView x:Name="viewlistBox"
+                          Height="195"
+                          VerticalAlignment="Top"
+                          Margin="0,0,-2,0"
+                          RenderTransformOrigin="0.5,0.5"
+                          PreviewMouseLeftButtonUp="viewlistBox_PreviewMouseLeftButtonUp">
+                </ListView>
+            </GroupBox>
+            <GroupBox x:Name="insertBox"
+                      Style="{x:Null}"
+                      Header="Insert"
+                      BorderBrush="#FF0E0E0E"
+                      Margin="298,0,9,240">
+                <ListView x:Name="insertlistBox"
+                          Height="195"
+                          VerticalAlignment="Top"
+                          Margin="0,0,-2,0"
+                          RenderTransformOrigin="0.5,0.5"
+                          PreviewMouseLeftButtonUp="insertlistBox_PreviewMouseLeftButtonUp">
+
+                </ListView>
+            </GroupBox>
+            <GroupBox x:Name="deleteBox"
+                      Style="{x:Null}"
+                      Header="Delete"
+                      BorderBrush="#FF0E0E0E"
+                      Margin="6,240,301,0">
+                <ListView x:Name="deletelistBox"
+                          Height="195"
+                          VerticalAlignment="Top"
+                          Margin="0,0,-2,0"
+                          RenderTransformOrigin="0.5,0.5"
+                          PreviewMouseLeftButtonUp="deletelistBox_PreviewMouseLeftButtonUp">
+                </ListView>
+            </GroupBox>
+            <GroupBox x:Name="editBox"
+                      Style="{x:Null}"
+                      Header="Edit"
+                      BorderBrush="#FF0E0E0E"
+                      Margin="301,240,7,0">
+                <ListView x:Name="updatelistBox"
+                          Height="195"
+                          VerticalAlignment="Top"
+                          Margin="0,0,-2,0"
+                          RenderTransformOrigin="0.5,0.5"
+                          PreviewMouseLeftButtonUp="updatelistBox_PreviewMouseLeftButtonUp">
+                </ListView>
+            </GroupBox>
+        </Grid>
+        <GroupBox x:Name="roleBox"
+                  Style="{x:Null}"
+                  Header="Role"
+                  BorderBrush="#FF0E0E0E"
+                  Canvas.Left="711"
+                  Canvas.Top="153"
+                  Width="439">
+            <ListView x:Name="roleListBox"
+                      Height="195"
+                      VerticalAlignment="Top"
+                      Margin="0,0,-2,0"
+                      RenderTransformOrigin="0.5,0.5"
+                      PreviewMouseLeftButtonUp="roleListBox_PreviewMouseLeftButtonUp">
+            </ListView>
+        </GroupBox>
+        <GroupBox x:Name="sysPrivilegeBox"
+                  Style="{x:Null}"
+                  Header="Quyền hệ thống"
+                  BorderBrush="#FF0E0E0E"
+                  Canvas.Left="711"
+                  Canvas.Top="395"
+                  Width="439">
+            <ListView x:Name="sysPrivilegeListBox"
+                      Height="195"
+                      VerticalAlignment="Top"
+                      Margin="0,0,-2,0"
+                      RenderTransformOrigin="0.5,0.5"
+                      PreviewMouseLeftButtonUp="sysPrivilegeListBox_PreviewMouseLeftButtonUp">
+            </ListView>
+        </GroupBox>
+    </Canvas>
+</Window>

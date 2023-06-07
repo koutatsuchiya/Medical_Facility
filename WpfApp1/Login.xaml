@@ -1,0 +1,112 @@
+﻿<Window x:Class="WpfApp1.Login"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp1"
+        mc:Ignorable="d"
+        Title="Login"
+        Height="450"
+        Width="800"
+        WindowStyle="None"
+        ResizeMode="NoResize"
+        WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Grid.Background>
+            <LinearGradientBrush StartPoint="0.1,0"
+                                 EndPoint="0.9,1">
+                <GradientStop Color="#ebe302"
+                              Offset="1" />
+                <GradientStop Color="#ba3606"
+                              Offset="0" />
+            </LinearGradientBrush>
+        </Grid.Background>
+        <Border Height="390"
+                VerticalAlignment="Top"
+                CornerRadius="0 0 180 0"
+                Background="#100E17"
+                >
+        </Border>
+        <StackPanel Orientation="Horizontal">
+            <StackPanel Width="350">
+                <Image Source="Images/thumbnail.jpg"
+                       Width="300"
+                       VerticalAlignment="Center"
+                       Margin="30, 100"
+                       Stretch="Fill" />
+            </StackPanel>
+            <StackPanel Width="350">
+                <StackPanel Margin="20 40">
+                    <TextBlock Text="Hệ thống Quản lí Cơ Sở Y Tế"
+                               Margin="20"
+                               Foreground="White"
+                               TextAlignment="Center"
+                               FontSize="20"
+                               FontFamily="San Serif"></TextBlock>
+                    <StackPanel Orientation="Horizontal"
+                                Margin="10">
+                        <materialDesign:PackIcon Kind="User"
+                                                 Width="25"
+                                                 Height="25"
+                                                 Foreground="White" />
+                        <TextBox x:Name="UsernameTextBox"
+                                 Margin="10 0"
+                                 materialDesign:HintAssist.Hint="Username"
+                                 Foreground="White"
+                                 Width="250"
+                                 BorderBrush="White"
+                                 CaretBrush="#FFD94448"
+                                 SelectionBrush="#FFD94448" />
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal"
+                                Margin="10">
+                        <materialDesign:PackIcon Kind="Lock"
+                                                 Width="25"
+                                                 Height="25"
+                                                 Foreground="White" />
+                        <PasswordBox x:Name="PasswordTextBox"
+                                     Margin="10 0"
+                                     materialDesign:HintAssist.Hint="********"
+                                     Foreground="White"
+                                     Width="250"
+                                     BorderBrush="White"
+                                     CaretBrush="#FFD94448"
+                                     SelectionBrush="#FFD94448" />
+                    </StackPanel>
+                    <StackPanel Margin="10"
+                                HorizontalAlignment="Center">
+                        <Button Width="120"
+                                Height="40"
+                                Style="{StaticResource MaterialDesignRaisedButton}"
+                                BorderThickness="2"
+                                BorderBrush="#e82b0e"
+                                Background="#e82b0e"
+                                Foreground="White"
+                                ToolTip="Login"
+                                Name="LoginButton"
+                                Click="LoginButton_Click"
+                               
+                                Content="Đăng nhập">
+                        </Button>
+                    </StackPanel>
+                </StackPanel>
+            </StackPanel>
+            <StackPanel Width="100">
+                <Button Margin="10 20"
+                        Style="{StaticResource MaterialDesignFlatButton}"
+                        Background="{x:Null}"
+                        ToolTip="Close"
+                        x:Name="btnExit"
+                        Click="btnExit_Click"
+                        BorderThickness="0">
+                    <materialDesign:PackIcon Kind="Close"
+                                             Foreground="White"
+                                             Width="30"
+                                             Height="30" 
+                                             />
+                </Button>
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</Window>

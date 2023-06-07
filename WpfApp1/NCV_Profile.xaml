@@ -1,0 +1,190 @@
+﻿<Page x:Class="WpfApp1.NCV_Profile"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+
+      xmlns:local="clr-namespace:WpfApp1"
+      mc:Ignorable="d" 
+      d:DesignHeight="665" d:DesignWidth="1400"
+      Title="Profile">
+
+    <Grid Background="CadetBlue">
+        
+        <StackPanel Orientation="Horizontal">
+            <StackPanel Width="350">
+                <Image Source="Images/Role.png"
+                       Width="300"
+                       VerticalAlignment="Center"
+                       Margin="30, 100"
+                       Stretch="Fill" />
+            </StackPanel>
+            <StackPanel Width="1050">
+                <StackPanel Margin="20 40">
+                    <TextBlock Text="Nghiên Cứu Viên"
+                              
+                               Foreground="White"
+                               TextAlignment="Center"
+                               FontSize="30"
+                               FontWeight="Bold"
+                               FontFamily="San Serif"></TextBlock>
+                    <StackPanel Orientation="Horizontal"
+                                Margin="10">
+                        <Label Name="UserNameLabel"  
+                                Content="Username"  
+                                Width="120" Height="40"  
+     
+                                Canvas.Top="10"  
+                                FontSize="14" 
+                                FontFamily="Georgia"  
+                                FontWeight="Bold"
+                                Foreground="White"
+                               />
+                        <TextBox x:Name="UsernameTextBox"
+                                 Margin="20 0"
+                                 Text="NCV1"
+                                 Foreground="White"
+                                 Width="800"
+                                 BorderBrush="White"
+                                 CaretBrush="#FFD94448"
+                                 SelectionBrush="#FFD94448"
+                                 IsReadOnly="True"
+                                 />
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal"
+                                Margin="10">
+                        <Label Name="FullNameLabel"  
+                                Content="Họ Tên"  
+                                Width="120" Height="40"  
+     
+                                Canvas.Top="10"  
+                                FontSize="14" 
+                                FontFamily="Georgia"  
+                                FontWeight="Bold"
+                                Foreground="White"
+                               />
+                        <TextBox x:Name="FullNameTextBox"
+                                     Margin="20 0"
+                                     Foreground="White"
+                                     Text="Nguyễn Văn A"
+                                     Width="800"
+                                     BorderBrush="White"
+                                     CaretBrush="#FFD94448"
+                                     SelectionBrush="#FFD94448" 
+                                     
+                                 />
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal"
+                                Margin="10">
+                        <Label Name="CSLabel"  
+                                Content="Cơ Sở"  
+                                Width="120" Height="40"  
+     
+                                Canvas.Top="10"  
+                                FontSize="14" 
+                                FontFamily="Georgia"  
+                                FontWeight="Bold"
+                                Foreground="White"
+                               />
+                        <TextBox x:Name="CSTextBox"
+                                     Margin="20 0"
+                                     Foreground="White"
+                                     Text="Thủ Đức"
+                                     Width="800"
+                                     BorderBrush="White"
+                                     CaretBrush="#FFD94448"
+                                     SelectionBrush="#FFD94448" 
+                                    
+                                 />
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal"
+                                Margin="10">
+                        <Label Name="CKLabel"  
+                                Content="Chuyên Khoa"  
+                                Width="120" Height="40"  
+     
+                                Canvas.Top="10"  
+                                FontSize="14" 
+                                FontFamily="Georgia"  
+                                FontWeight="Bold"
+                                Foreground="White"
+                               />
+                        <TextBox x:Name="CKTextBox"
+                                     Margin="20 0"
+                                     Foreground="White"
+                                     Text="Tim Mạch"
+                                     Width="800"
+                                     BorderBrush="White"
+                                     CaretBrush="#FFD94448"
+                                     SelectionBrush="#FFD94448" 
+                                    
+                                 />
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal"
+                                Margin="10">
+                        <Label Name="NSLabel"  
+                                Content="Ngày Sinh"  
+                                Width="120" Height="40"  
+     
+                                Canvas.Top="10"  
+                                FontSize="14" 
+                                FontFamily="Georgia"  
+                                FontWeight="Bold"
+                                Foreground="White"
+                               />
+                        <DatePicker  Margin="20 0" BorderBrush="White"  Height="25" HorizontalAlignment="Left"  x:Name="NSDatePicker" VerticalAlignment="Top" Width="800"  />
+                        
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal"
+                                Margin="10">
+                        <Label Name="QQLabel"  
+                                Content="Quê Quán"  
+                                Width="120" Height="40"  
+     
+                                Canvas.Top="10"  
+                                FontSize="14" 
+                                FontFamily="Georgia"  
+                                FontWeight="Bold"
+                                Foreground="White"
+                               />
+                        <TextBox x:Name="QQTextBox"
+                                     Margin="20 0"
+                                     Foreground="White"
+                                     Text="Hồ Chí Minh"
+                                     Width="800"
+                                     BorderBrush="White"
+                                     CaretBrush="#FFD94448"
+                                     SelectionBrush="#FFD94448" 
+                                     
+                                 />
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal"
+                                Margin="10">
+                        <Label Name="DTLabel"  
+                                Content="Điện thoại"  
+                                Width="120" Height="40"  
+     
+                                Canvas.Top="10"  
+                                FontSize="14" 
+                                FontFamily="Georgia"  
+                                FontWeight="Bold"
+                                Foreground="White"
+                               />
+                        <TextBox x:Name="DTTextBox"
+                                     Margin="20 0"
+                                     Foreground="White"
+                                     Text="098272721"
+                                     Width="800"
+                                     BorderBrush="White"
+                                     CaretBrush="#FFD94448"
+                                     SelectionBrush="#FFD94448" 
+                                    
+                                 />
+                    </StackPanel>
+                    <Button Click="update_Click">Cập nhật</Button>
+                </StackPanel>
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</Page>

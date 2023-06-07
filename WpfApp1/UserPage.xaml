@@ -1,0 +1,154 @@
+﻿<Page x:Class="WpfApp1.UserPage"
+      xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      xmlns:local="clr-namespace:WpfApp1"
+      mc:Ignorable="d"
+      d:DesignHeight="665"
+      d:DesignWidth="1400"
+      Title="UserPage">
+    <Canvas>
+        <StackPanel>
+            <DockPanel Width="1400">
+                <materialDesign:Card Margin="20,0,0,0"
+                                     Height="34"
+                                     Width="1000"
+                                     VerticalAlignment="Top"
+                                     HorizontalAlignment="Left">
+                    <StackPanel Orientation="Horizontal"
+                                Height="34"
+                                Width="1000"
+                                VerticalAlignment="Center">
+                        <TextBox Name="keywordTextbox" 
+                            Margin="8 0 0 0"
+                                 materialDesign:HintAssist.Hint="Username"
+                                 materialDesign:TextFieldAssist.DecorationVisibility="Hidden"
+                                 BorderThickness="0"
+                                 MinWidth="950"
+                                 VerticalAlignment="Center" />
+                    </StackPanel>
+                </materialDesign:Card>
+                <Button Background="#44eb07"
+                        Margin="20, 0, 0, 0"
+                        BorderBrush="{x:Null}"
+                        Name="SearchButton"
+                        Click="SearchButton_Click">
+                    <StackPanel Orientation="Horizontal">
+                        <materialDesign:PackIcon Kind="Search"
+                                                 Foreground="White" />
+                        <TextBlock FontFamily="Champagne &amp; Limousines">
+                        Tìm kiếm
+                        </TextBlock>
+                    </StackPanel>
+                </Button>
+                <Button HorizontalAlignment="Right"
+                        Background="red"
+                        Margin="0, 0, 50, 0"
+                        BorderBrush="{x:Null}"
+                        Name="AddUserButton"
+                        Click="AddUserButton_Click">
+                    <StackPanel Orientation="Horizontal">
+                        <materialDesign:PackIcon Kind="AccountPlus"
+                                                 Foreground="White" />
+                        <TextBlock FontFamily="Champagne &amp; Limousines">
+                        Thêm User
+                        </TextBlock>
+                    </StackPanel>
+                </Button>
+            </DockPanel>
+            <materialDesign:Card Width="1300"
+                                 Margin="0, 50, 25, 0">
+                <ListView Name="ListViewUser"
+                          ScrollViewer.VerticalScrollBarVisibility="Visible"
+                          ScrollViewer.CanContentScroll="False"
+                          MaxHeight="550">
+                   
+                    <ListView.View>
+                        <GridView>
+                            <GridViewColumn DisplayMemberBinding="{Binding Id}"
+                                            Header="Id"
+                                            Width="100" />
+                            <GridViewColumn DisplayMemberBinding="{Binding Username}"
+                                            Header="Username"
+                                            Width="200" />
+                            <GridViewColumn DisplayMemberBinding="{Binding AccountStatus}"
+                                            Header="Account Status"
+                                            Width="200" />
+                            <GridViewColumn DisplayMemberBinding="{Binding Created}"
+                                            Header="Created"
+                                            Width="200" />
+                            <GridViewColumn DisplayMemberBinding="{Binding ExpiryDate}"
+                                            Header="Expiry Date"
+                                            Width="200" />
+                            <GridViewColumn DisplayMemberBinding="{Binding LastLogin}"
+                                            Header="Last Login"
+                                            Width="200" />
+                            <GridViewColumn Width="50">
+                                <GridViewColumn.CellTemplate>
+                                    <DataTemplate>
+                                        <Button Width="40"
+                                                Background="Green"
+                                                BorderBrush="{x:Null}"
+                                                Padding="0"
+                                                Tag="{Binding Username}"
+                                                Click="AllPrivilegeButton_Click"
+                                                ToolTip="Xem thông tin quyền">
+                                            <Button.Content>
+                                                <materialDesign:PackIcon Kind="FileDocumentBox"
+                                                                         Foreground="White"
+                                                                         VerticalAlignment="Center"
+                                                                         FontSize="16" />
+                                            </Button.Content>
+                                        </Button>
+                                    </DataTemplate>
+                                </GridViewColumn.CellTemplate>
+                            </GridViewColumn>
+                            <GridViewColumn Width="50">
+                                <GridViewColumn.CellTemplate>
+                                    <DataTemplate>
+                                        <Button Width="40"
+                                                Background="Yellow"
+                                                BorderBrush="{x:Null}"
+                                                Padding="0"
+                                                Tag="{Binding Username}"
+                                                Click="UserInformationButton_Click"
+                                                ToolTip="Xem thông tin cá nhân user">
+                                            <Button.Content>
+                                                <materialDesign:PackIcon Kind="Eye"
+                                                                         Foreground="White"
+                                                                         VerticalAlignment="Center"
+                                                                         FontSize="16" />
+                                            </Button.Content>
+                                        </Button>
+                                    </DataTemplate>
+                                </GridViewColumn.CellTemplate>
+                            </GridViewColumn>
+                            <GridViewColumn Width="50">
+                                <GridViewColumn.CellTemplate>
+                                    <DataTemplate>
+                                        <Button Width="40"
+                                                Background="Red"
+                                                BorderBrush="{x:Null}"
+                                                Padding="0"
+                                                Tag="{Binding Username}"
+                                                Click="DropUserButton_Click"
+                                                ToolTip="Xóa User">
+                                            <Button.Content>
+                                                <materialDesign:PackIcon Kind="Delete"
+                                                                         Foreground="White"
+                                                                         VerticalAlignment="Center"
+                                                                         FontSize="16" />
+                                            </Button.Content>
+                                        </Button>
+                                    </DataTemplate>
+                                </GridViewColumn.CellTemplate>
+                            </GridViewColumn>
+                        </GridView>
+                    </ListView.View>
+                </ListView>
+            </materialDesign:Card>
+        </StackPanel>
+    </Canvas>
+</Page>
